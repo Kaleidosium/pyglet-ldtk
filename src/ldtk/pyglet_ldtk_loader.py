@@ -121,12 +121,12 @@ class FieldParser:
     """Parses LDtk field instances into usable Python types."""
 
     @staticmethod
-    def parse(layer: "Layer", field_data: Dict) -> Any:
+    def parse(layer: Optional["Layer"], field_data: Dict) -> Any:
         val = field_data.get("__value")
         if val is None:
             return None
 
-        type_name = field_data.get("__type")
+        type_name = field_data.get("__type", "")
 
         # 1. Handle Colors (Hex string -> RGB tuple)
         if type_name == "Color":
@@ -136,6 +136,9 @@ class FieldParser:
 
         # 2. Handle Points (Grid Coords -> World Pixel Coords)
         elif type_name == "Point":
+            if layer is None:
+                return None
+
             # Val is {'cx': 10, 'cy': 5}
             # Convert to pixel coordinates using the layer's logic
             cx, cy = val["cx"], val["cy"]
