@@ -2,13 +2,6 @@
 pyglet_ldtk_loader.py
 
 A module for loading LDtk (Level Designer Toolkit) maps into Pyglet.
-This loader handles:
-- Parsing LDtk JSON files (standard and external levels).
-- Loading tilesets and extracting tile regions.
-- Creating Pyglet Sprites for Tiles and Entities.
-- Handling IntGrid layers as colored rectangles.
-- Rendering 9-slice entities.
-- Converting LDtk Top-Left coordinates to Pyglet Bottom-Left coordinates automatically.
 
 Usage:
     loader = Ldtk("path/to/map.ldtk")
@@ -727,7 +720,7 @@ class Entity:
             self.definition.tileRect if self.definition else None
         )
 
-        # NEW: Parse Fields
+        # Parse Fields
         self.props = {}
         for field in self.data.get("fieldInstances", []):
             identifier = field["__identifier"]
