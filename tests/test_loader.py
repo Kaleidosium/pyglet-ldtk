@@ -107,7 +107,9 @@ def test_ldtk_initialization(mock_pyglet, sample_ldtk_json, mocker):
     """Test if the Ldtk class parses the JSON correctly."""
 
     # Mock opening the file
-    mocker.patch("builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json)))
+    mocker.patch(
+        "builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json))
+    )
     loader = Ldtk("dummy_map.ldtk")
 
     assert len(loader.tilesets) == 1
@@ -132,7 +134,9 @@ def test_coordinate_conversion(mock_pyglet, sample_ldtk_json, mocker):
     pyglet_y = level_height - (ldtk_top + height)
              = 240 - (184 + 16) = 40
     """
-    mocker.patch("builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json)))
+    mocker.patch(
+        "builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json))
+    )
     loader = Ldtk("dummy_map.ldtk")
 
     level = loader.levels[0]
@@ -186,7 +190,9 @@ def test_layer_ordering(mock_pyglet, sample_ldtk_json, mocker):
 def test_level_methods(mock_pyglet, sample_ldtk_json, mocker):
     """Test LdtkLevel methods like GetLayerById and GetEntities*."""
 
-    mocker.patch("builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json)))
+    mocker.patch(
+        "builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json))
+    )
     loader = Ldtk("dummy_map.ldtk")
 
     level = loader.levels[0]
@@ -234,7 +240,9 @@ def test_level_methods(mock_pyglet, sample_ldtk_json, mocker):
 def test_entity_sprite_generation(mock_pyglet, sample_ldtk_json, mocker):
     """Test that get_sprites creates pyglet sprites with correct texture."""
 
-    mocker.patch("builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json)))
+    mocker.patch(
+        "builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json))
+    )
     mocker.patch("os.path.exists", return_value=True)
     loader = Ldtk("dummy_map.ldtk")
 
@@ -261,7 +269,9 @@ def test_entity_sprite_generation(mock_pyglet, sample_ldtk_json, mocker):
 
 def test_enums(mock_pyglet, sample_ldtk_json, mocker):
     """Test that strings are correctly converted to Enums."""
-    mocker.patch("builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json)))
+    mocker.patch(
+        "builtins.open", mocker.mock_open(read_data=json.dumps(sample_ldtk_json))
+    )
     loader = Ldtk("dummy_map.ldtk")
 
     entity_def = loader.entity_defs[201]
