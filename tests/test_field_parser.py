@@ -1,4 +1,3 @@
-import pytest
 from ldtk.pyglet_ldtk_loader import FieldParser
 
 
