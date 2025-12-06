@@ -14,11 +14,11 @@ A loader for [LDtk](https://ldtk.io/) (Level Designer Toolkit) maps, specificall
 - **Batch Rendering:** Optimized for pyglet's `Batch` system for efficient rendering.
 - **IntGrid Visualization:** Renders IntGrid layers as colored rectangles for easy debugging or visualization.
 
-<!-- ## Installation
+## Installation
 
 ```bash
 pip install pyglet-ldtk
-``` -->
+```
 
 ## Usage
 
