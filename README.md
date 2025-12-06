@@ -1,6 +1,8 @@
 # pyglet-ldtk
 
+![PyPI - License](https://img.shields.io/pypi/l/pyglet-ldtk)
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
+![PyPI - Version](https://img.shields.io/pypi/v/pyglet-ldtk)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 A loader for [LDtk](https://ldtk.io/) (Level Designer Toolkit) maps, specifically designed for use with the [pyglet](https://pyglet.org/) game development library. This module simplifies the process of integrating your LDtk level designs into your pyglet applications, handling everything from parsing LDtk JSON files to rendering complex tile layers and entities.
