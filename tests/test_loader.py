@@ -216,6 +216,7 @@ def test_level_methods(mock_pyglet, sample_ldtk_json, mocker):
     assert len(layer_ents) == 1
     assert layer_ents[0] == all_ents[0]
 
+    # Test GetEntitiesByLayer with no entities
     empty_layer_ents = level.GetEntitiesByLayer("NonExistentLayer")
     assert len(empty_layer_ents) == 0
 
