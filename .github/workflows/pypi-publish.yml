@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     name: Run tests before publishing
-    uses: ./.github/workflows/test.yml # Reuse test workflow
+    uses: .github/workflows/tests.yml # Reuse test workflow
 
   pypi-publish:
     name: Upload release to PyPI
