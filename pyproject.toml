@@ -1,6 +1,6 @@
 [project]
 name = "pyglet-ldtk"
-version = "0.1.1"
+version = "0.1.2"
 description = "A loader for LDtk (Level Designer Toolkit) maps, specifically designed for use with the pyglet game development library."
 readme = "README.md"
 authors = [{name = "Dania Rifki", email = "atomicnumberphi@gmail.com"}]

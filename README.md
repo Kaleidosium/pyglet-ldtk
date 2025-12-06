@@ -1,5 +1,6 @@
 # pyglet-ldtk
 
+[![Tests](https://github.com/Kaleidosium/pyglet-ldtk/actions/workflows/tests.yml/badge.svg)](https://github.com/Kaleidosium/pyglet-ldtk/actions/workflows/tests.yml)
 ![PyPI - License](https://img.shields.io/pypi/l/pyglet-ldtk)
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
 ![PyPI - Version](https://img.shields.io/pypi/v/pyglet-ldtk)
