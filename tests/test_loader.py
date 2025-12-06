@@ -218,11 +218,7 @@ def test_level_methods(mock_pyglet, sample_ldtk_json, mocker):
 
     empty_layer_ents = level.GetEntitiesByLayer(
         "NonExistentLayer"
-    )  # Should return empty list if cache empty?
-    # Wait, GetEntitiesByLayer implementation:
-    # if layer_id not in self.getCache[0]...
-    #   for e in self.entities: if e.layer.identifier == layer_id...
-    # So if layer doesn't exist, it just returns empty list.
+    )
     assert len(empty_layer_ents) == 0
 
     # Test GetEntitiesByID
